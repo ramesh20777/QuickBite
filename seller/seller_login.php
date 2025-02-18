@@ -1,87 +1,58 @@
 <?php
-// Database connection
-$host = 'localhost'; // Replace with your host
-$user = 'root';      // Replace with your database username
-$pass = '';          // Replace with your database password
-$dbname = 'quickbite'; // Replace with your database name
+ session_start();
+ $servername = "localhost";
+$db_username = "root";   
+$db_password = "";       
+$db_name = "quickbite";
 
-$conn = new mysqli($host, $user, $pass, $dbname);
+ $conn = new mysqli($servername, $db_username, $db_password, $db_name);
 
-// Check connection
-if ($conn->connect_error) {
+ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
-}
 
-// Start session
-session_start();
+ }  
 
-// Handle form submission
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $username = trim($_POST['username']);
-    $password = trim($_POST['password']);
 
-    // Validation
-    if (empty($username) || empty($password)) {
-        echo "Both fields are required.";
-    } else {
-        // Fetch user from database
-        $query = "SELECT * FROM `seller_accounts` WHERE `username` = ?";
-        $stmt = $conn->prepare($query);
-        $stmt->bind_param('s', $username);
-        $stmt->execute();
-        $result = $stmt->get_result();
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $email = $_POST["email"];
+    $password = $_POST["password"];
 
-        if ($result->num_rows === 1) {
-            $user = $result->fetch_assoc();
-            
-            // Validate password (assuming plain text password for now)
-            if ($password === $user['password']) {
-                // Set session variables
-                $_SESSION['seller_id'] = $user['id'];
-                $_SESSION['username'] = $user['username'];
+    $sql = "SELECT * FROM sellers WHERE email='$email'";
+    $result = $conn->query($sql);
 
-                // Redirect to seller dashboard
-                header("Location: Seller.php");
-                exit();
-            } else {
-                echo "Incorrect password.";
-            }
+    if ($result->num_rows > 0) {
+        $row = $result->fetch_assoc();
+        if (password_verify($password, $row["password"])) {
+            $_SESSION["seller"] = $row["name"];
+            header("Location: seller_index.php");
         } else {
-            echo "User not found.";
+            echo "<script>alert('Invalid Password!');</script>";
         }
+    } else {
+        echo "<script>alert('No account found with this email!');</script>";
     }
 }
-$conn->close();
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Seller Login</title>
-    <link rel="stylesheet" href="seller_login.css">
+    <link rel="stylesheet" href="signup_login.css">
 </head>
-
 <body>
-    <div class="login-container">
-        <div class="login-box">
-            <h2>Seller Login</h2>
-            <form action="#" method="POST">
-                <div class="input-group">
-                    <label for="username">Username</label>
-                    <input type="text" id="username" name="username" placeholder="Enter your username" required>
-                </div>
-                <div class="input-group">
-                    <label for="password">Password</label>
-                    <input type="password" id="password" name="password" placeholder="Enter your password" required>
-                </div>
-                <button type="submit" class="login-btn">Login</button>
-                <p class="signup-link">Don't have an account? <a href="signin.php">Sign up</a></p>
-            </form>
-        </div>
+    <div class="form-container">
+        <h2>Seller Login</h2>
+        <form action="" method="POST">
+            <label for="email">Email:</label>
+            <input type="email" name="email" placeholder="Enter Email" required>
+            <label for="password">Password:</label>
+            <input type="password" name="password" placeholder="Enter Password" required>
+            <button type="submit">Login</button>
+            <p>Don't have an account? <a href="seller_signup.php">Sign Up</a></p>
+        </form>
     </div>
 </body>
-
 </html>

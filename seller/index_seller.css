@@ -1,0 +1,124 @@
+:root {
+    --primary-color: #426a96;
+    --secondary-color: #f0f3f2;
+    --text-color: #333;
+     --header-color: #2c3e50;
+    --danger-color: #d32f2f;
+}
+
+body {
+    background: var(--background-color);
+    font-family: 'Poppins', sans-serif;
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    background: var(--primary-color);
+    color: white;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 10px var(--shadow);
+}
+
+.navbar .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.logout-btn {
+    background: #d6d4d4;
+    color: rgb(9, 8, 8);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s;
+    display: inline-block;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+    font-size: 16px;
+}
+
+.logout-btn:hover {
+    background: #e63946;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+
+
+.hero-banner {
+    margin-top: 20px;
+    background: var(--secondary-color);
+    padding: 60px 20px;
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: var(--text-color);
+    position: relative;
+}
+
+.hero-banner img {
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+    opacity: 0.9;
+}
+
+.hero-banner p {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(44, 41, 41, 0.8);
+    padding: 15px 25px;
+    border-radius: 8px;
+    color: white;
+    font-size: 1.4rem;
+}
+
+.dashboard-container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+.dashboard-content {
+    margin-bottom: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+     margin-top: 20px;
+}
+
+.dashboard-card {
+    margin-top: 20px;
+    background: linear-gradient(white, rgb(57, 126, 153));
+    color: #060707;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px var(--shadow);
+ }
+
+.btn {
+    background: var(--primary-color);
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s;
+    text-align: center;
+    margin-top: 10px;
+    display: inline-block;
+    margin-left: 1000px;
+
+}
+
+.btn:hover {
+    background: red;
+}

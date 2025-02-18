@@ -27,7 +27,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $_SESSION['loggedin'] = true;
 
              echo "<script>
-                    window.location.href = 'Quick_home.php';
+                    window.location.href = 'index.php';
                   </script>";
             exit();
         } else {
@@ -44,12 +44,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="register.css">
     <title>Login</title>
 </head>
+
 <body>
     <div class="form-container">
         <h2>Login</h2>
@@ -69,4 +71,5 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         </form>
     </div>
 </body>
+
 </html>

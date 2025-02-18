@@ -7,43 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Combo Offers</title>
     <link rel="stylesheet" href="combo.css">
-    <style>
-         
-      
-         #order-form-section {
-             display: none;
-            background-color: white;
-            padding: 40px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            margin-top: 30px;
-            border-radius: 10px;
-            width: 50%;
-            margin: 0 auto;
-        }
-        #order-form-section h2 {
-            margin-bottom: 30px;
-        }
-        #order-form-section input,
-        #order-form-section select,
-        #order-form-section button {
-            width: 100%;
-            padding: 15px;
-            margin: 10px 0;
-            margin-bottom: 10px;
-            border: 1px solid black;
-            border-radius: 35px;
-        }
-        #order-form-section button {
-            background-color:rgb(9, 11, 10);
-            color: white;
-            border: none;
-            border-radius: 30px;
-            cursor: pointer;
-        }
-        #order-form-section button:hover {
-            background-color:rgb(111, 50, 157);
-        }
-    </style>
+     
 </head>
 <body>
     <header>
@@ -51,10 +15,10 @@
              <div class="logo">🍴 Quick Bite - Combo Offers</div>
               <nav>
                 <ul>
-                    <li><a href="Quick_home.php">Home</a></li>
-                    <li><a href="menu.php">Menu</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
+                    <li><a href="http://localhost/QuickBite/index.php">Home</a></li>
+                    <li><a href="http://localhost/QuickBite/menu.php">Menu</a></li>
+                    <li><a href="http://localhost/QuickBite/logout.php">Logout</a></li>
+                 </ul>
             </nav>
         </div>
     </header>
@@ -145,10 +109,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         </div>
  
     <footer>
-        <div class="footer-container">
-            <p>&copy; 2024 Online Food Ordering System</p>
-        </div>
-    </footer>
+        <?php
+        include 'Footer.php';
+        ?>
+             <p>&copy; 2024 Online Food Ordering System</p>
+     </footer>
 
     <script>
         function showOrderForm(comboId) {

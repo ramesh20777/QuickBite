@@ -1,13 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Next-Level Header</title>
-    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="menu_header.css">
 </head>
 <style>
-     body, h1, a {
+body,
+h1,
+a {
     margin: 0;
     padding: 0;
     text-decoration: none;
@@ -22,12 +25,12 @@ body {
     padding: 0;
 }
 
- .main-header {
+.main-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 15px 20px;
-    background: linear-gradient(45deg,rgb(13, 14, 14),rgb(91, 42, 125));
+    background: linear-gradient(45deg, rgb(13, 14, 14), rgb(91, 42, 125));
     color: #ffffff;
     position: sticky;
     top: 0;
@@ -35,13 +38,13 @@ body {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
- .logo {
+.logo {
     font-size: 24px;
     font-weight: bold;
     letter-spacing: 1px;
 }
 
- .nav-links {
+.nav-links {
     display: flex;
     gap: 20px;
     align-items: center;
@@ -57,19 +60,19 @@ body {
     font-weight: bold;
 }
 
- .nav-links a:hover {
+.nav-links a:hover {
     background-color: #ffccbc;
     color: #ff6f61;
 }
 
- .menu-toggle {
+.menu-toggle {
     display: none;
     font-size: 24px;
     cursor: pointer;
     color: #ffffff;
 }
 
- @media (max-width: 768px) {
+@media (max-width: 768px) {
     .nav-links {
         display: none;
         flex-direction: column;
@@ -105,41 +108,37 @@ body {
     }
 }
 
- .page-title {
+.page-title {
     margin-top: 20px;
     text-align: center;
     font-size: 28px;
     color: #ff6f61;
     font-weight: bold;
 }
-
-</style>
+</style> 
 <body>
-    <?php 
-    
-    ?>
     <header class="main-header">
         <div class="logo">🍴 Quick Bite</div>
         <nav class="nav-links">
-        <a href="Quick_home.php">Home</a>
-          <a href="Quick_home.php">About Us</a>
-           <a href="menu.php">Menu</a>
-           <a href="review.php">Review</a>
-          <a href="combo.php">Offers</a>
-          <a href="contact.php">Contact</a>
-           <a href="login.php">Login</a>
+            <a href="http://localhost/QuickBite/index.php">Home</a>
+            <a href="http://localhost/QuickBite/index.php">About Us</a>
+            <a href="http://localhost/QuickBite/menu.php">Menu</a>
+            <a href="http://localhoast/QuickBite/combo.php">Offers</a>
+             <a href="http://localhost/QuickBite/review.php">Review</a></a>
+            <a href="http://localhost/QuickBite/login.php">Login</a>
         </nav>
         <div class="menu-toggle" id="menuToggle">
             ☰
         </div>
     </header>
-     
+
     <script>
-         const menuToggle = document.getElementById('menuToggle');
-        const navLinks = document.querySelector('.nav-links');
-        menuToggle.addEventListener('click', () => {
-            navLinks.classList.toggle('show-menu');
-        });
+    const menuToggle = document.getElementById('menuToggle');
+    const navLinks = document.querySelector('.nav-links');
+    menuToggle.addEventListener('click', () => {
+        navLinks.classList.toggle('show-menu');
+    });
     </script>
 </body>
+
 </html>

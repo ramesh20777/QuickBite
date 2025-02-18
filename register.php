@@ -46,6 +46,75 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <link rel="stylesheet" href="register.css">
     <title>Register</title>
 </head>
+<style>
+     body {
+    font-family: Arial, sans-serif;
+     margin: 0;
+    padding: 0;
+    background-image: linear-gradient(to bottom, rgba(19, 19, 14, 0.62), rgba(25, 124, 177, 0.8));
+
+}
+.form-container {
+    width: 100%;
+    max-width: 350px;
+    margin: 30px auto;
+    padding: 40px;
+    background: #f7f7f8;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(246, 244, 244, 0.1);
+}
+h2 {
+    font-size: 30px;
+    text-align: center;
+    color: #0e0c0c;
+}
+.form-group {
+    margin-bottom: 20px;
+}
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #0f0d0d;
+}
+input[type="text"], input[type="email"], input[type="password"] {
+    width: 100%;
+    font-size: 12px;
+    padding: 10px;
+    border: 1px solid #390953;
+    border-radius: 30px;
+}
+button {
+    font-size: 16px;
+    width: 100%;
+    padding: 10px;
+    background: #121312;
+    color: rgb(240, 241, 241);
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+}
+button:hover {
+    background: #5f1386;
+} 
+
+.link {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.link a {
+    text-decoration: none;
+    color: #0a1017;
+    font-weight: bold;
+    font-size: 16px;
+    transition: text-decoration 0.3s ease, color 0.3s ease;
+}
+
+.link a:hover {
+    text-decoration: underline;
+    color: #a01b67;
+}
+</style>
 
 <body>
     <div class="form-container">

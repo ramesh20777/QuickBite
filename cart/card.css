@@ -85,8 +85,8 @@ section {
 }
 
 .orders-container th {
-    background-color:rgb(9, 10, 10);
-    color: rgb(246, 244, 244);
+    background-color:rgb(218, 226, 226);
+    color: rgb(17, 14, 14);
     font-size: 16px;
 }
 
@@ -192,4 +192,67 @@ h3 {
 
 .view-button:hover, .add-button:hover {
     background-color:rgb(40, 108, 164);
+}
+
+ 
+form input {
+    width: 20%;
+    padding: 10px;
+    font-size: 14px;
+    margin-bottom: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    transition: all 0.3s ease;
+}
+
+form input:focus {
+    border-color: #0072ff;
+    box-shadow: 0 0 5px rgba(0, 114, 255, 0.3);
+    outline: none;
+}
+
+form button {
+    width: 30%;
+    padding: 10px;
+    background: linear-gradient(to right,rgb(6, 7, 8),rgb(1, 2, 3));
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+form button:hover {
+    background-color: #0056b3;
+}
+
+
+.Payment {
+    text-align: end;
+ }
+
+.Payment a {
+    display: inline-block;
+    padding: 10px 30px;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    background: linear-gradient(to right,rgb(9, 10, 10), #0072ff);
+    border-radius: 30px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.Payment a:hover {
+    background: linear-gradient(to right, #0072ff, #00c6ff);
+    transform: translateY(-4px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.Payment a:active {
+    transform: translateY(2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }

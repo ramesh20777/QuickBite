@@ -20,8 +20,7 @@ if (session_status() === PHP_SESSION_NONE) {
         <nav class="nav-links">
             <a href="Quick_home.php">Home</a>
             <a href="#about">About Us</a>
-            <a href="contact.php">Contact</a>
-            <a href="menu.php">Menu</a>
+             <a href="menu.php">Menu</a>
             <a href="combo.php">Offers</a>
             <?php if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] === true): ?>
             <li id="logoutButton">
@@ -100,8 +99,7 @@ if (session_status() === PHP_SESSION_NONE) {
             pizza, burger, rice, or fish, we've got something to satisfy every craving. Check out our top picks and
             order now!</p>
         <div class="container">
-            <!-- Pizza Card -->
-            <div class="featured-item">
+             <div class="featured-item">
                 <div class="card">
                     <img src="img/istockphoto-pizza.jpg" alt="Pizza">
                     <div class="card-content">
@@ -112,8 +110,7 @@ if (session_status() === PHP_SESSION_NONE) {
                 </div>
             </div>
 
-            <!-- Burger Card -->
-            <div class="featured-item">
+             <div class="featured-item">
                 <div class="card">
                     <img src="img/istockphoto-burger.jpg" alt="Burger">
                     <div class="card-content">
@@ -124,8 +121,7 @@ if (session_status() === PHP_SESSION_NONE) {
                 </div>
             </div>
 
-            <!-- Rice Card -->
-            <div class="featured-item">
+             <div class="featured-item">
                 <div class="card">
                     <img src="img/istockphoto-rice.jpg" alt="Rice">
                     <div class="card-content">
@@ -136,8 +132,7 @@ if (session_status() === PHP_SESSION_NONE) {
                 </div>
             </div>
 
-            <!-- Fish Card -->
-            <div class="featured-item">
+             <div class="featured-item">
                 <div class="card">
                     <img src="img/istockphoto-fish.jpg" alt="Fish">
                     <div class="card-content">
@@ -194,39 +189,9 @@ $conn->close();
             </div>
         </div>
     </section>
-
-    <footer class="footer">
-        <div class="footer-container">
-            <div class="footer-section">
-                <h3>Quick Bite</h3>
-                <p>&copy; 2024 Online Food Ordering System. All rights reserved.</p>
-            </div>
-            <div class="footer-section">
-                <h3>Quick Links</h3>
-                <ul>
-                    <li><a href="#">Terms & Conditions</a></li>
-                    <li><a href="#">Privacy Policy</a></li>
-                    <li><a href="#">Cart</a></li>
-                    <li><a href="#">Contact</a></li>
-                </ul>
-            </div>
-            <div class="footer-section">
-                <h3>Follow Us</h3>
-                <ul class="social-links">
-                    <li><a href="#">Facebook</a></li>
-                    <li><a href="#">Instagram</a></li>
-                    <li><a href="#">Twitter</a></li>
-                    <li><a href="#">LinkedIn</a></li>
-                </ul>
-            </div>
-            <div class="footer-section">
-                <h3>Contact</h3>
-                <p>Email: support@quickbite.com</p>
-                <p>Phone: 123-456-7890</p>
-            </div>
-        </div>
-    </footer>
-
+<?php
+include 'Footer.php';
+?>
     <script>
     document.addEventListener('DOMContentLoaded', () => {
         const isLoggedIn =

@@ -38,7 +38,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     if ($stmt->execute()) {
                         $_SESSION['username'] = $username;
                         $_SESSION['profile_image'] = $newFileName;
-                        header("Location: Admin.php");
+                        header("Location: dashboard_body.php");
                         exit;
                     } else {
                         echo "Error saving user data.";
@@ -62,105 +62,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Profile Image Upload</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<style>
-body {
-    font-family: 'Arial', sans-serif;
-    background-image: linear-gradient(to bottom, rgba(19, 19, 14, 0.62), rgba(149, 25, 177, 0.8)), url("img/istockphoto-1446478805-612x612.jpg");
-    margin: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-}
-
-.profile-container {
-    background-color: rgb(247, 246, 250);
-    padding: 40px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    max-width: 400px;
-    text-align: center;
-    position: relative;
-}
-
-.profile-circle {
-    width: 120px;
-    height: 120px;
-    background-color: #f0f0f0;
-    border: 2px solid #ddd;
-    border-radius: 50%;
-    margin: 0 auto 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-}
-
-.profile-circle img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-h1 {
-    font-size: 24px;
-    margin-bottom: 20px;
-    color: #333;
-}
-
-.form-group {
-    margin-bottom: 20px;
-    text-align: left;
-}
-
-label {
-    display: block;
-    font-size: 14px;
-    color: #555;
-    margin-bottom: 5px;
-}
-
-input[type="text"],
-input[type="email"],
-input[type="password"],
-input[type="file"] {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    font-size: 16px;
-    box-sizing: border-box;
-}
-
-input[type="file"] {
-    padding: 5px;
-}
-
-input:focus {
-    border-color: rgb(3, 4, 4);
-    outline: none;
-    box-shadow: 0 0 5px rgba(9, 13, 17, 0.5);
-}
-
-.upload-button {
-    width: 100%;
-    padding: 12px;
-    background-color: rgb(9, 10, 11);
-    border: none;
-    border-radius: 5px;
-    color: white;
-    font-size: 16px;
-    cursor: pointer;
-}
-
-.upload-button:hover {
-    background-color: #0056b3;
-}
-</style>
-
+    <link rel="stylesheet" href="Admin_login.css">
+ </head>
 <body>
     <div class="profile-container">
         <div class="profile-circle" id="profileDisplay">

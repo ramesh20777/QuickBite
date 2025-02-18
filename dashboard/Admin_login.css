@@ -1,124 +1,94 @@
 body {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
     background-image: linear-gradient(to bottom, rgba(19, 19, 14, 0.62), rgba(149, 25, 177, 0.8)), url("img/istockphoto-1446478805-612x612.jpg");
+    margin: 0;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    color: #fff;
 }
 
 .profile-container {
-    background-color: white;
+    background-color: rgb(247, 246, 250);
+    padding: 40px;
     border-radius: 10px;
-    box-shadow: 0 10px 8px rgba(0, 0, 0, 0.2);
-    padding: 35px;
-    height: 500px;
-    width: 600px;
-    text-align: center;
-}
-
-.profile-container h1 {
-    color: #41094d;
-    margin-bottom: 40px;
-}
-
-.input-group {
-    margin-bottom: 25px;
-    text-align: left;
-}
-
-.input-group label {
-    font-weight: bold;
-    margin-bottom: 5px;
-    display: block;
-}
-
-.input-group input {
-    width: 100%;
-    padding: 20px;
-    border: 1px solid black;
-    border-radius: 30px;
-    margin-top: 5px;
-    font-size: 16px;
-}
-
-.input-group input:focus {
-    border-color:rgb(10, 11, 10);
-    outline: none;
-    box-shadow: 0 0 4pxrgb(142, 152, 143);
-}
-.upload-container {
-    background: #ffffff;
-    padding: 30px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     width: 100%;
     max-width: 400px;
+    text-align: center;
+    position: relative;
 }
 
- .upload-container h1 {
-    color: #333;
-    margin-bottom: 20px;
+.profile-circle {
+    width: 120px;
+    height: 120px;
+    background-color: #f0f0f0;
+    border: 2px solid #ddd;
+    border-radius: 50%;
+    margin: 0 auto 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.profile-circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+h1 {
     font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
 }
 
- .image-upload-container {
+.form-group {
     margin-bottom: 20px;
     text-align: left;
 }
 
- .image-upload-label {
-    font-weight: bold;
+label {
     display: block;
-    margin-bottom: 5px;
+    font-size: 14px;
     color: #555;
+    margin-bottom: 5px;
 }
 
- .image-upload-container input[type="file"] {
-    display: block;
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="file"] {
     width: 100%;
     padding: 10px;
-    border: 1px solid #ccc;
+    border: 1px solid #ddd;
     border-radius: 5px;
-    font-size: 14px;
-    cursor: pointer;
-    background-color: #f9f9f9;
+    font-size: 16px;
+    box-sizing: border-box;
 }
 
-.login-button {
-    width: 100%;
-    background:rgb(13, 13, 13);
-    color: white;
-    padding: 15px;
-    border: none;
-    border-radius: 30px;
-    font-size: 18px;
-    cursor: pointer;
-    transition: background 0.3s;
+input[type="file"] {
+    padding: 5px;
 }
 
-.login-button:hover {
-    background:rgb(34, 19, 127);
-}
-
-.login-button:focus {
+input:focus {
+    border-color: rgb(3, 4, 4);
     outline: none;
+    box-shadow: 0 0 5px rgba(9, 13, 17, 0.5);
 }
 
-@media (max-width: 768px) {
-    .profile-container {
-        padding: 20px;
-    }
+.upload-button {
+    width: 100%;
+    padding: 12px;
+    background-color: rgb(9, 10, 11);
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
 
-    .profile-container h1 {
-        font-size: 20px;
-    }
-
-    .login-button {
-        font-size: 16px;
-    }
+.upload-button:hover {
+    background-color: #0056b3;
 }

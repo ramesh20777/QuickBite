@@ -1,0 +1,107 @@
+:root {
+    --primary-color:rgb(40, 95, 120); 
+    --secondary-color: #ffffff; 
+    --accent-color: #1e88e5;
+    --background-color: #f9f9f9; 
+    --text-color: #333; 
+    --border-color: #e0e0e0; 
+    --hover-color: #f1f1f1; 
+    --danger-color: #f44336; 
+}
+
+  
+.order-section {
+    margin-top: 20px;
+    background: var(--secondary-color);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 1200px;
+}
+
+.order-section h2 {
+    font-size: 24px;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+ table {
+    width: 1150px;
+    border-collapse: collapse;
+    overflow: hidden;
+    background: var(--secondary-color);
+    border-radius: 10px;
+}
+
+thead {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+}
+
+thead th {
+    padding: 12px;
+    text-align: left;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+tbody tr {
+    border-bottom: 1px solid var(--border-color);
+    transition: background-color 0.3s;
+}
+
+tbody tr:hover {
+    background-color: var(--hover-color);
+}
+
+tbody td {
+    padding: 12px;
+    text-align: left;
+    color: var(--text-color);
+}
+button.delete-order-btn {
+    padding: 8px 15px;
+    background-color: var(--danger-color);
+    color: var(--secondary-color);
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button.delete-order-btn:hover {
+    background-color: #d32f2f; 
+}
+
+a.delete-button {
+    display: inline-block;
+    padding: 8px 15px;
+    background-color: var(--danger-color);
+    color: var(--secondary-color);
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+a.delete-button:hover {
+    background-color: #d32f2f;  
+    transform: scale(1.05);
+}
+
+ @media (max-width: 768px) {
+    thead th, tbody td {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    button.delete-order-btn, a.delete-button {
+        font-size: 12px;
+        padding: 6px 10px;
+    }
+}

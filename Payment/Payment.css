@@ -1,340 +1,47 @@
- body {
+body {
     font-family: Arial, sans-serif;
+    background-color: rgb(243, 247, 249);
     margin: 0;
     padding: 0;
-    background-color: #222;
-    color: #fff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
 }
 
- .container {
-    display: flex;
-    max-width: 3000px;
-    background-color: #0b0a0a;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(17, 9, 9, 0.2);
-    overflow: hidden;
-    flex-direction: row;
-    justify-content: center;
-    margin-top: 50px;
+.container {
+    width: 400px;
+    height: 450px;
+    margin: 50px auto;
+    padding: 30px;
+    background: rgb(229, 226, 226);
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(red, green, blue, alpha);
 }
 
-.payment-section, .login-section {
-    width: 60%;
-     padding: 20px;
-    background-color:rgb(13, 10, 10);
-     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+h1 {
+    text-align: center;
 }
 
-
- .payment-section {
-    flex: 1;
-    padding: 50px;
-    background-color: #28355f;
-     flex-direction: column;
-     gap: 20px;
-
+label {
+    display: block;
+    margin: 10px 0 5px;
 }
 
-.payment-section .logo img {
-    width: 100px;
+input  {
+    width: 100%;
+    padding: 10px;
     margin-bottom: 20px;
-    width: 100px;
-    border-radius: 50%;
-   display: flex;
-   margin: 0 auto 10px;
-}
-
-.payment-section h2 {
-    color: #e5ebe5;
-    font-size: 24px;
-    text-align: center;
-    color: #fff;
-}
-
-.amount-details p {
-    font-size: 14px;
-    color: #bbb;
-}
-
-.amount-details h3 {
-    font-size: 28px;
-    color: #12da12;
-}
-
-.advertisement img {
-    width: 100%;
-    border-radius: 8px;
-}
-
- .login-section {
-    flex: 1;
-    padding: 50px;
-    background-color: #0d0b0b;
-}
-
-.login-section h2 {
-    font-size: 25px;
-    margin-bottom: 30px;
-}
-
-.input-group {
-    margin-bottom: 25px;
-}
-
-.input-group label {
-    display: block;
-    font-size: 14px;
-    margin-bottom: 5px;
-}
-
-.input-group input {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #192e8b;
-    border-radius: 4px;
-    background-color: #111010;
-    color: #fff;
-}
-
-.input-group input:focus {
-    border-color: #4CAF50;
-    outline: none;
-}
-
-.captcha {
-    background-color: #144f83;
-    padding: 10px;
-    margin: 15px 0;
-    text-align: center;
+    border-radius: 10px;
+    border: 1px solid #111;
 }
 
 button {
-    width: 100%;
+    background-color: rgb(10, 66, 115);
+    color: white;
+    width: 50%;
     padding: 10px;
-    border: none;
-    border-radius: 4px;
-    background-color: #4CAF50;
-    color: #fff;
-    font-size: 16px;
-    cursor: pointer;
+    margin-left: 100px;
+    border-radius: 10px;
+    border: 1px solid #111;
 }
 
 button:hover {
-    background-color: #45a049;
+    background: #030d0e;
 }
-
-.links {
-    text-align: center;
-    margin-top: 15px;
-}
-
-.links a {
-    color: #f8fbf8;
-    text-decoration: none;
-}
-
-.cancel-btn {
-    background-color: #f44336;
-    margin-top: 15px;
-}
-
-.cancel-btn:hover {
-    background-color: #e53935;
-}
-
-.login-section.hidden {
-    display: none;
-}
-
-.verify-section {
-    display: none;
-}
-
-.verify-section.active {
-    display: block;
-}
-
-amount-details {
-    text-align: center;
-    margin: 25px 0;
-}
-
-.amount-details p {
-    font-size: 20px;
-    color: #777;
-}
-
-.amount-details h3 {
-    font-size: 24px;
-    color: #4CAF50;
-}
-
-.advertisement img {
-    width: 100%;
-    border-radius: 8px;
-}
-
-.login-section .input-group {
-    margin-bottom: 15px;
-}
-
-.login-section .input-group label {
-    display: block;
-    margin-bottom: 10px;
-    color: #fff;
-}
-
-.login-section .input-group input {
-    width: 100%;
-    padding: 15px;
-    border: 1px solid red;
-    border-radius: 5px;
-    box-sizing: border-box;
-}
-
-.captcha {
-    margin: 12px 0;
-    font-size: 20px;
-    color: #fff;
-}
-
-.login-section button {
-    width: 100%;
-    padding: 10px;
-    background-color:rgb(253, 255, 253);
-    color: #111;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.login-section button.cancel-btn {
-    background-color: #f44336;
-    margin-top: 10px;
-}
-
-.login-section .links {
-    margin-top: 15px;
-    text-align: center;
-}
-
-.login-section .links a {
-    color: #4CAF50;
-    text-decoration: none;
-}
-
-.login-section.hidden {
-    display: none;
-}
-
-.verify-section {
-    display: none;
-}
-
-.verify-section.active {
-    display: block;
-}
-
-
-.verify-section {
-width: 100%;
-max-width: 450px;
-margin: 50px auto;
-padding: 30px;
-}
-
-.verify-section p {
-text-align: center;
-font-size: 18px;
-color: #fff;
-margin-bottom: 20px;
-}
-
-.input-group {
-margin-bottom: 20px;
-}
-
-.input-group label {
-display: block;
-font-size: 16px;
-color: #fff;
-margin-bottom: 8px;
-}
-
-.input-group input {
-width: 100%;
-padding: 10px;
-font-size: 16px;
-border: 1px solid #ccc;
-border-radius: 4px;
-box-sizing: border-box;
-}
-
-.input-group input:focus {
-border-color: #007bff;
-outline: none;
-}
-
-button {
-background-color:rgb(15, 83, 95);
-padding: 15px;
-font-size: 16px;
-border: none;
-cursor: pointer;
-border-radius: 4px;
-margin-top: 10px;
-transition: background-color 0.3s;
-}
-
-button:hover {
-opacity: 0.9;
-}
-
-button[type="submit"] {
-background-color: #007bff;
-color: white;
-}
-
-.done-btn {
-background-color: #28a745;
-color: white;
-width: auto;
-margin: 20px 0 10px;
-padding: 10px 20px;
-border-radius: 4px;
-}
-
-.cancel-btn {
-background-color: #dc3545;
-color: white;
-width: 100%;
-padding: 12px 20px;
-border-radius: 4px;
-text-align: center;
-font-size: 16px;
-cursor: pointer;
-}
-
-.cancel-btn:hover {
-background-color: #c82333;
-}
-
-.links {
-text-align: center;
-}
-
-@media screen and (max-width: 768px) {
-.verify-section {
-width: 90%;
-padding: 15px;
-}
-
-button {
-width: 100%;
-}
-}
- 
