@@ -1,0 +1,153 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #eef2f7;
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    padding: 2rem;
+    margin-left: 30px;
+    max-width: 90%;
+    transition: margin-left 0.3s;
+}
+
+.active-sidebar~main {
+    margin-left: 200px;
+}
+
+.insights > div {
+    background: white;
+    padding: 3rem; 
+    border-radius: 1.5rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 300ms ease;
+    width: 100%;
+    max-width: 700px;  
+    text-align: center;
+}
+
+.insights {
+    height: 400px;
+    width: 1150px;
+    display: flex;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));  
+    gap: 2.5rem; 
+    margin-top: 2rem;
+    justify-content: center;
+}
+.insights > div:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px);
+}
+
+.icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+     height: 70px;
+    width: 70px;
+    background-color: black;
+     border-radius: 50%;
+}
+ 
+
+.material-symbols-outlined:hover {
+    background: rgba(40, 199, 111, 0.2);
+    transform: scale(1.1);
+}
+
+
+.progress {
+    position: relative;
+    width: 200px;
+    height: 100px;
+    margin: 1rem auto;
+    border-radius: 50%;
+    background: radial-gradient(closest-side, white 79%, transparent 80% 100%), conic-gradient(var(--progress-color) var(--progress-value), #dfe6ee 0);
+}
+
+.sales .progress {
+    --progress-value: <?= $sales_percentage ?>%;
+    --progress-color:rgb(32, 135, 84);
+    height: 90px;
+    width: 90px;
+}
+
+.expenses .progress {
+    --progress-value: <?= $expenses_percentage ?>%;
+    --progress-color:rgb(20, 128, 160);
+    height: 90px;
+    width: 90px;
+}
+
+.income .progress {
+    --progress-value: <?= $income_percentage ?>%;
+    --progress-color:rgb(94, 33, 169);
+    height: 90px;
+    width: 90px;
+}
+
+.number {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.middle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 1.5rem 0;
+}
+
+.left h3:first-child {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+    color: #555;
+}
+
+.left h3:last-child {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.add-btn {
+    display: inline-block;
+    background:rgb(7, 7, 9);
+    color: white;
+    padding: 0.6rem 1.2rem;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    margin-top: 1rem;
+    font-weight: bold;
+    transition: all 300ms ease;
+}
+
+.add-btn:hover {
+    background:rgb(26, 68, 126);
+}
+
+.material-symbols-outlined {
+    background: rgba(249, 250, 252, 0.1); 
+     border-radius: 50%; 
+    color:rgb(238, 240, 241);  
+   }
+
+.expenses .material-symbols-outlined {
+    color:rgb(229, 218, 218);
+    background: rgba(234, 84, 85, 0.1);
+    
+}
+
+.income .material-symbols-outlined {
+    color:rgb(226, 234, 229);
+    background: rgba(40, 199, 111, 0.1);
+     
+}
+
+

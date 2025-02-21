@@ -1,29 +1,45 @@
 <?php
- $servername = "localhost";
- $db_username = "root";   
- $db_password = "";       
- $db_name = "quickbite";
- 
-  $conn = new mysqli($servername, $db_username, $db_password, $db_name);
- 
-  if ($conn->connect_error) {
-     die("Connection failed: " . $conn->connect_error);
- 
-  }  
- 
+$servername = "localhost";
+$db_username = "root";
+$db_password = "";
+$db_name = "quickbite";
+
+$conn = new mysqli($servername, $db_username, $db_password, $db_name);
+
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $name = $_POST["name"];
     $email = $_POST["email"];
     $password = password_hash($_POST["password"], PASSWORD_DEFAULT);
 
-    $sql = "INSERT INTO sellers (name, email, password) VALUES ('$name', '$email', '$password')";
-    
-    if ($conn->query($sql) === TRUE) {
-        header("Location: seller_login.php?signup=success");
+    $check_sql = "SELECT email FROM sellers WHERE email = ?";
+    $stmt = $conn->prepare($check_sql);
+    $stmt->bind_param("s", $email);
+    $stmt->execute();
+    $stmt->store_result();
+
+    if ($stmt->num_rows > 0) {
+        echo "Error: This email is already registered. Please use another email.";
     } else {
-        echo "Error: " . $conn->error;
+        $stmt->close();
+        $sql = "INSERT INTO sellers (name, email, password) VALUES (?, ?, ?)";
+        $stmt = $conn->prepare($sql);
+        $stmt->bind_param("sss", $name, $email, $password);
+
+        if ($stmt->execute()) {
+            header("Location: seller_login.php?signup=success");
+            exit();
+        } else {
+            echo "Error: " . $conn->error;
+        }
     }
+    $stmt->close();
 }
+
+$conn->close();
 ?>
 
 <!DOCTYPE html>

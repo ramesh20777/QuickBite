@@ -49,8 +49,7 @@ $result = $conn->query($sql);
     --border-radius-2: 0.4rem;
     --border-radius-3: 1.2rem;
     --card-padding: 1.8rem;
-    --padding-1: 1.2rem;
-    --box-shadow: 0 2rem 3rem rgba(0, 0, 0, 0.1);
+     --box-shadow: 0 2rem 3rem rgba(0, 0, 0, 0.1);
 }
 
 * {
@@ -72,13 +71,13 @@ aside {
     width: 20%;
     background: rgb(4, 4, 5);
     color: #fff;
-    padding: 10px;
     height: 100vh;
     display: flex;
     flex-direction: column;
 }
 
 aside .logo {
+    margin-left: 15px;
     margin-top: 15px;
     display: flex;
     align-items: center;
@@ -87,8 +86,8 @@ aside .logo {
 }
 
 aside .logo img {
-    width: 80px;
-    height: 80px;
+    width: 70px;
+    height: 70px;
     border-radius: 50%;
 }
 
@@ -100,6 +99,7 @@ aside .sidebar {
 }
 
 aside .sidebar a {
+    margin-left: 10px;
     color: white;
     display: flex;
     align-items: center;
@@ -116,13 +116,6 @@ aside .sidebar a.active {
     background: var(--color-info-light);
 }
 
-aside .sidebar .message-count {
-    background: var(--color-danger);
-    color: white;
-    padding: 0.2rem 0.6rem;
-    font-size: 0.8rem;
-    border-radius: var(--border-radius-1);
-}
 
 @media screen and (max-width: 768px) {
     .container {
@@ -155,6 +148,7 @@ aside .sidebar .message-count {
 
 #messageLink h3 {
     margin-left: 10px;
+    padding: 2px;
 }
 
 .material-symbols-outlined {
@@ -211,11 +205,11 @@ aside .sidebar .message-count {
 
             <div class="sidebar">
                 <a href="http://localhost/QuickBite/dashboard/dashboard_body.php"
-                    class="<?= $section == 'dashboard' ? 'active' : '' ?>" id="dashboardLink">
+                    class="<?= $section == 'dashboard' ? 'active' : '' ?>">
                     <span class="material-symbols-outlined">grid_view</span>
                     <h3>Dashboard</h3>
                 </a>
-                <a href="http://localhost/QuickBite/dashboard/Admin_table/Customer.php" id="customerTableLink">
+                <a href="http://localhost/QuickBite/dashboard/Admin_table/Customer.php">
                     <span class="material-symbols-outlined">person_outline</span>
                     <h3>Customer</h3>
                 </a>
@@ -227,7 +221,7 @@ aside .sidebar .message-count {
                     <span class="material-symbols-outlined">mail_outline</span>
                     <h3>Message</h3>
                  </a>
-                <a href="http://localhost/QuickBite/dashboard/Admin_table/Report.php" id=" reportLink">
+                <a href="http://localhost/QuickBite/dashboard/Report.php" id=" reportLink">
                     <span class="material-symbols-outlined">report_gmailerrorred</span>
                     <h3>Reports</h3>
                 </a>
@@ -235,7 +229,7 @@ aside .sidebar .message-count {
                     <span class="material-symbols-outlined">add</span>
                     <h3>Offers</h3>
                 </a>
-                <a href="../logout.php"><span class="material-symbols-outlined">logout</span>
+                <a href="http://localhost/QuickBite/dashboard/Admin_login.php"><span class="material-symbols-outlined">logout</span>
                     <h3>Logout</h3>
                 </a>
 

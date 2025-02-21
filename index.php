@@ -18,7 +18,7 @@ if (session_status() === PHP_SESSION_NONE) {
     <header class="main-header">
         <div class="logo">🍴 Quick Bite</div>
         <nav class="nav-links">
-            <a href="Quick_home.php">Home</a>
+            <a href="index.php">Home</a>
             <a href="#about">About Us</a>
              <a href="menu.php">Menu</a>
             <a href="combo.php">Offers</a>

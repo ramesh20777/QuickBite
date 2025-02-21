@@ -38,7 +38,7 @@ $conn->close();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="payment.css">
-    <title>eSewa Payment Integration</title>
+    <title>Payment Integration</title>
 </head>
 <body>
     <div class="container">
@@ -54,7 +54,7 @@ $conn->close();
             <label for="amount">Amount (NRP):</label>
             <input type="number" id="amount" name="amount" required>
 
-            <button type="submit">Pay with eSewa</button>
+            <button type="submit">Payment</button>
         </form>
     </div>
 </body>

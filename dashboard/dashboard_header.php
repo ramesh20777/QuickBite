@@ -65,7 +65,7 @@ if (isset($_SESSION['profile_image']) && isset($_SESSION['username'])) {
     header h1 {
         font-size: 1.5rem;
         font-weight: bold;
-        margin-right: 1100px;
+        margin-right: 1090px;
     }
 
     header.profile {
@@ -96,8 +96,8 @@ if (isset($_SESSION['profile_image']) && isset($_SESSION['username'])) {
     }
 
     header.profile .profile-photo {
-        width: 60px;
-        height: 60px;
+        width: 70px;
+        height: 70px;
         border-radius: 50%;
         overflow: hidden;
         border: 2px solid var(--profile-photo-border);

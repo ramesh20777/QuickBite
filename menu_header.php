@@ -123,10 +123,9 @@ body {
             <a href="http://localhost/QuickBite/index.php">Home</a>
             <a href="http://localhost/QuickBite/index.php">About Us</a>
             <a href="http://localhost/QuickBite/menu.php">Menu</a>
-            <a href="http://localhoast/QuickBite/combo.php">Offers</a>
+            <a href="http://localhost/QuickBite/combo.php">Offers</a>
              <a href="http://localhost/QuickBite/review.php">Review</a></a>
-            <a href="http://localhost/QuickBite/login.php">Login</a>
-        </nav>
+         </nav>
         <div class="menu-toggle" id="menuToggle">
             ☰
         </div>
